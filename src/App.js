@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from "./pages/NoPages/NoPage";
+import Layout from "./pages/Layout/Layout";
+import Setting from "./pages/Setting/Setting";
+import Search from "./pages/Search/Search";
+import "./Fonts/Fonts.scss";
+import YangiBuyurtmalar from "./pages/YangiBuyurtmalar/YangiBuyurtmalar";
+import AmaldagiBuyurtmalar from "./pages/AmaldagiBuyurtmalar/AmaldagiBuyurtmalar";
+import Hisobot from "./pages/Hisobot/Hisobot";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Search />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<YangiBuyurtmalar />} />
+          <Route path="amaldagibuyurtmalar" element={<AmaldagiBuyurtmalar />} />
+          <Route path="settings" element={<Setting />} />
+          <Route path="hisobot" element={<Hisobot />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

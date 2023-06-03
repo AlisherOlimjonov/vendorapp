@@ -1,0 +1,47 @@
+.order {
+  display: flex;
+  border: 2px solid rgb(63, 61, 61);
+  width: 80vw;
+  justify-content: space-between;
+  height: 3rem;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 1rem;
+}
+.orderParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 0 2rem;
+  background: #edecec;
+}
+.inform,
+.condition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.redCircle {
+  color: red;
+  border: 1px solid red;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.greenCircle {
+  color: green;
+  border: 1px solid green;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}

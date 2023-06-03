@@ -1,0 +1,25 @@
+.text {
+  color: white;
+}
+
+.parent {
+  display: flex;
+}
+.li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(130, 26, 119);
+  font-weight: bold;
+}
+
+.cart {
+  color: white;
+  width: 30px;
+}

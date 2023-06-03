@@ -1,0 +1,19 @@
+.addition {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.input {
+  width: 30rem;
+  border-radius: 1rem;
+}
+.form {
+  display: flex;
+  position: relative;
+  height: 50px;
+}
+.lupa {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.5rem;
+}
